@@ -11,12 +11,20 @@ def tirar_dado(num_veces):
     return tiros
 def main(num_veces,num_inten):
     tiros=[]
+    tiros_1=0
+    cont=0
+    algo=[]
     for i in range(num_inten):
         secuencia=tirar_dado(num_veces)
         tiros.append(secuencia)
-        tiros_1=0
     for i in tiros:
-        if 12 in i:
+        cont=0
+        for j in i:
+            if j==10:
+                cont+=1
+        algo.append(cont)
+    for i in algo:
+        if(i==5):
             tiros_1+=1
     probabilidad=tiros_1/num_inten
     return probabilidad
