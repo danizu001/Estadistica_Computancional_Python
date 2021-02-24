@@ -24,7 +24,7 @@ def main(num_veces,num_inten):
                 cont+=1
         algo.append(cont)
     for i in algo:
-        if(i==5):
+        if(i==5):¨
             tiros_1+=1
     probabilidad=tiros_1/num_inten
     return probabilidad
